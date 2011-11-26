@@ -1,0 +1,16 @@
+Kullanım:
+	python fport.py  google.com -p80 
+
+nmap komutu yardımı ile bir portu birden fazla kez taramaya yarar.
+fport.py den sonra bekleme süresi ve tekrar sayısı belirtilebilir.
+fport.py den sonra gelen ilk parametre kaç saniye aralıkla çalışacağını belirtir.
+İkinci parametre kaç kez çalışacağını belirtir.
+Bu iki parametreden  sonra nmap için istenen parametreler, 
+nmap komutu çalıştırılırken girildiği şekilde girilmelidir.
+
+Örn:  python fport.py 1 10 google.com -p80
+
+Eğer port, tarama süresince açık olmuşsa ve nmap için -oG parametresi kullanılırsa 
+program çıkıştan önce taranan portun hangi zamanlarda açık olduğunu gösterir.
+
+Örn:  python fport.py 1 10 -oG - google.com -p80 
